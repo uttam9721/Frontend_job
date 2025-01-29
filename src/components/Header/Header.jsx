@@ -1,9 +1,11 @@
 import React from 'react'
 import './Header.css'
 // import Header from './Header';
+import { assets } from './../../assets/assets';
 const Header = () => {
   return (
     <div className='header'>
+         <img className='header_img' src={assets.header_img}/>
       <div className="header-contents">
       <h2>Order your favourite food here</h2>
        <p>Lorem ipsum dolor sit amet 
