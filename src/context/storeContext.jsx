@@ -5,7 +5,7 @@ import { food_list } from "../assets/assets";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState({}); // Corrected syntax
+  const [cartItems, setCartItems] = useState({}); 
 
   // Add to Cart
   const addToCart = (itemId) => {
@@ -14,7 +14,7 @@ const StoreContextProvider = (props) => {
     } else {
       setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     }
-  };
+  }; 
 
   // Remove from Cart
   const removeFromCart = (itemId) => {
@@ -29,7 +29,6 @@ const StoreContextProvider = (props) => {
     let totalAmount = 0;
     for(const item in cartItems){
       if(cartItems[item]>0){
-        // totalAmount += food_list[item].price * cartItems[item];
         let itemInfo = food_list.find((product)=>product._id===item)
         totalAmount += itemInfo.price * cartItems[item];
       }

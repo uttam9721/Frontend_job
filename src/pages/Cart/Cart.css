@@ -83,6 +83,7 @@
     background: transparent;
     border: none;
     outline: none;
+    /* outline: none; */
   }
   .cart-promocode-input button{
     width: max(10vw,158px);
